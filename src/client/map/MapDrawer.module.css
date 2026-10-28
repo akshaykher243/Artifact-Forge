@@ -1,0 +1,135 @@
+.drawer {
+  /* The artifact's width setting excludes the border. */
+  box-sizing: content-box;
+  flex: 0 0 auto;
+  max-width: 70%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--page);
+  color: var(--ink);
+  border-left: 1px solid var(--border);
+}
+
+.header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px 10px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.titleBlock {
+  min-width: 0;
+  flex: 1;
+}
+
+.title,
+.path {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.path {
+  font-size: 12px;
+  color: var(--subtle);
+}
+
+.counts {
+  flex: none;
+  font-size: 12.5px;
+}
+
+.add {
+  color: var(--add-ink);
+}
+
+.del {
+  color: var(--del-ink);
+}
+
+.check {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.close {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+.note {
+  margin: 0;
+  padding: 12px 16px;
+  color: var(--del-ink);
+}
+
+.files {
+  padding: 8px 0;
+}
+
+.fileRow {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  border: 0;
+  background: none;
+  padding: 6px 16px;
+  font: inherit;
+  font-size: 12.5px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--ink);
+}
+
+.fileName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer {
+  flex: none;
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.open {
+  font: inherit;
+  font-size: 12.5px;
+  border: 1px solid var(--control-border);
+  background: var(--page);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 4px 12px;
+  min-height: 32px;
+  cursor: pointer;
+}

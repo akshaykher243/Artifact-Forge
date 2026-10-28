@@ -1,0 +1,100 @@
+/*
+ * Every value is taken from the exported prflow artifact, except the ones marked AA: those were
+ * darkened (same hue) so text meets WCAG AA contrast, an approved deviation from the artifact.
+ */
+:root {
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-size: 13px;
+  --line-height: 1.5;
+
+  --ink: #1d2330;
+  --muted: #5f6878;
+  --subtle: #656c7a; /* AA; artifact #7a8394 */
+  --line-number: #676b74; /* AA; artifact #9aa1ae */
+  --page: #ffffff;
+  --panel: #f7f8fa;
+  --fold-bg: #fafbfc;
+  --border: #e3e6eb;
+  --control-border: #dadde3;
+  --resizer-line: #c3c9d4;
+
+  --accent: #2b50d6;
+  --on-accent: #ffffff;
+  --selected-bg: #e9eefb;
+  --link-hover: #1f4fb8;
+
+  --add-ink: #1e7f4f;
+  --del-ink: #b42f3a;
+  --add-bg: #eaf6ee;
+  --del-bg: #fdeded;
+  --add-highlight: #bfe3cb;
+  --del-highlight: #f6c5c5;
+  --backdrop: rgb(29 35 48 / 35%);
+  --hatch: repeating-linear-gradient(135deg, #e9ecf0 0 1px, #ffffff 1px 7px);
+  --modified-mark: #c9822b;
+  --lang-badge: #b25917; /* AA; artifact #c2611a */
+
+  --syntax-plain: #1d2330;
+  --syntax-keyword: #1f4fb8;
+  --syntax-string: #8d451a; /* AA; artifact #a3501e */
+  --syntax-number: #824d00; /* AA; artifact #9a5b00 */
+  --syntax-literal: #7438ba; /* AA; artifact #7b3bc4 */
+  --syntax-type: #0e6464; /* AA; artifact #127a7a */
+  --syntax-comment: #656c7a; /* AA; artifact #7a8394 */
+
+  /* The dark map canvas; every text pair here already meets AA. */
+  --map-canvas: #0b0f1a;
+  --map-dot: #222b45;
+  --map-ink: #e6e9f2;
+  --map-muted: #9aa3b8;
+  --map-level-ink: #c5cbdd;
+  --map-bar: #10162a;
+  --map-bar-border: #232b45;
+  --map-control: #1a2240;
+  --map-control-on: #2a3358;
+  --map-control-border: #2c3658;
+  --map-card: #151c36;
+  --map-link: #7fb0ff;
+  --map-folder-bg: #13131a;
+  --map-file-bg: #10152a;
+  --map-box-border: #2c3658;
+  --map-box-touched: #6b5a2e;
+  --map-node-bg: #161b2b;
+  --map-node-border: #3a4568;
+  --map-added-bg: #12261d;
+  --map-added-border: #3fbf82;
+  --map-changed-bg: #2a2113;
+  --map-changed-border: #e0a23b;
+  --map-add-ink: #5fd39a;
+  --map-del-ink: #ff8a8f;
+  --map-edge: #7468d6;
+  --map-legend-calls: #8b7cf6;
+  --map-ring: #7fb0ff;
+  --map-resizer-line: #3a4568;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}

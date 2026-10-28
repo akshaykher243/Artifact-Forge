@@ -1,0 +1,87 @@
+.screen {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--page);
+}
+
+.sidebar {
+  box-sizing: content-box;
+  flex: none;
+  width: 360px;
+  height: 100%;
+  overflow-y: auto;
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+}
+
+.main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.header {
+  background: var(--page);
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 53px;
+}
+
+.crumb {
+  font-size: 12px;
+  color: var(--subtle);
+}
+
+.heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.opened {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.openedHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.repoName {
+  font-weight: 600;
+}
+
+.change {
+  margin-left: auto;
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid var(--control-border);
+  background: var(--page);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 3px 9px;
+  min-height: 28px;
+  cursor: pointer;
+}
+
+.repoPath {
+  font-size: 11.5px;
+  color: var(--subtle);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.refs {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}

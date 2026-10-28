@@ -1,0 +1,111 @@
+.picker {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label,
+.recentsTitle {
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: inherit;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 12.5px;
+  border: 1px solid var(--control-border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  min-height: 30px;
+  background: var(--page);
+  color: var(--ink);
+}
+
+.open {
+  font: inherit;
+  font-size: 12.5px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: 6px;
+  padding: 4px 12px;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+.open:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.hint {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--subtle);
+  overflow-wrap: anywhere;
+}
+
+.error {
+  margin: 0;
+  font-size: 12px;
+  color: var(--del-ink);
+  overflow-wrap: anywhere;
+}
+
+.recents {
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.recentsTitle {
+  padding: 0 18px 6px;
+}
+
+.recent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border: 0;
+  background: none;
+  font: inherit;
+  padding: 4px 18px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--ink);
+}
+
+.recent:hover {
+  background: var(--selected-bg);
+}
+
+.recentName {
+  font-weight: 600;
+}
+
+.recentPath {
+  max-width: 100%;
+  font-size: 11.5px;
+  color: var(--subtle);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

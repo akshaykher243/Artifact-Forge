@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+// Fake GitHub CLI for tests. Reads $HOME/fake-gh/scenario.json, appends each call (arguments and
+// stdin) to $HOME/fake-gh/calls.jsonl, and answers with the first rule whose `args` prefix matches.
+// Rule: { "args": ["pr", "view"], "exitCode": 0, "stdout": "...", "stderr": "", "delayMs": 0 }
+import { appendFileSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+const dir = join(process.env.HOME ?? '', 'fake-gh');
+const args = process.argv.slice(2);
+
+const readStdin = () => {
+  try {
+    return readFileSync(0, 'utf8');
+  } catch {
+    return '';
+  }
+};
+
+const stdin = process.stdin.isTTY ? '' : readStdin();
+try {
+  appendFileSync(join(dir, 'calls.jsonl'), `${JSON.stringify({ args, stdin })}\n`);
+} catch {
+  // No scenario folder: the call is still answered below (with a failure).
+}
+
+let rules = [];
+try {
+  rules = JSON.parse(readFileSync(join(dir, 'scenario.json'), 'utf8')).rules ?? [];
+} catch {
+  rules = [];
+}
+const rule = rules.find((candidate) => candidate.args.every((arg, index) => args[index] === arg));
+if (rule === undefined) {
+  process.stderr.write(`fake gh: no scenario rule for: ${args.join(' ')}\n`);
+  process.exit(2);
+}
+setTimeout(() => {
+  process.stdout.write(rule.stdout ?? '');
+  process.stderr.write(rule.stderr ?? '');
+  process.exit(rule.exitCode ?? 0);
+}, rule.delayMs ?? 0);

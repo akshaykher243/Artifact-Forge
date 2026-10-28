@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+.DS_Store
+.env*
+# Visual baselines are regenerated from docs/ on every run
+tests/e2e/*-snapshots/

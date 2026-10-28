@@ -1,0 +1,37 @@
+{
+  "schema": "1.22.0",
+  "tools": ["claude"],
+  "rules": [
+    "principles",
+    "security",
+    "typescript",
+    "react-typescript",
+    "nodejs-typescript",
+    "performance"
+  ],
+  "agents": [
+    "pr-coding-standards",
+    "pr-performance",
+    "pr-principles",
+    "pr-security",
+    "pr-tests",
+    "pr-validator",
+    "pr-voice"
+  ],
+  "skills": [
+    "react",
+    "typescript",
+    "node",
+    "e2e-testing",
+    "code-review",
+    "code-review-post",
+    "audit-codebase",
+    "git-workflow",
+    "sync",
+    "retro",
+    "define-structure"
+  ],
+  "localCopy": false,
+  "gitignoreStrategy": "commit-to-git",
+  "configuredAt": "2026-10-26T10:05:54Z"
+}

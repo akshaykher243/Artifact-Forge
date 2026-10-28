@@ -1,0 +1,173 @@
+/* The artifact's right-hand drawer, reused for the review. */
+.drawer {
+  flex: none;
+  max-width: 70%;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--page);
+  color: var(--ink);
+  border-left: 1px solid var(--border);
+}
+
+.header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px 10px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.titleBlock {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  display: block;
+  font-weight: 600;
+}
+
+.counts {
+  display: block;
+  font-size: 12px;
+  color: var(--subtle);
+}
+
+.close {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+.section {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: inherit;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.textarea {
+  font: inherit;
+  font-size: 12.5px;
+  width: 100%;
+  resize: vertical;
+  border: 1px solid var(--control-border);
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: var(--ink);
+  background: var(--page);
+}
+
+.error {
+  font-size: 12px;
+  color: var(--del-ink);
+}
+
+.empty {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--subtle);
+}
+
+.navigation {
+  display: flex;
+  gap: 6px;
+}
+
+.button {
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid var(--control-border);
+  background: var(--page);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 3px 9px;
+  min-height: 28px;
+  cursor: pointer;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  padding: 6px 8px;
+  font: inherit;
+  font-size: 12.5px;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.item:hover,
+.current {
+  background: var(--selected-bg);
+}
+
+.current {
+  border-color: var(--accent);
+}
+
+.itemHeader {
+  display: flex;
+  gap: 8px;
+}
+
+.location {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.state {
+  flex: none;
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.preview {
+  color: var(--subtle);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

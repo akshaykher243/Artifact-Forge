@@ -1,0 +1,157 @@
+.map {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--map-canvas);
+  color: var(--map-ink);
+}
+
+.body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+}
+
+.toolbar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px 14px;
+  background: var(--map-bar);
+  border-bottom: 1px solid var(--map-bar-border);
+}
+
+.levels {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 7px;
+  background: var(--map-canvas);
+  border: 1px solid var(--map-bar-border);
+}
+
+.level {
+  font: inherit;
+  font-size: 12px;
+  border: 0;
+  border-radius: 5px;
+  padding: 4px 11px;
+  min-height: 28px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--map-level-ink);
+}
+
+.levelOn {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.zoom {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.square,
+.zoomReset,
+.toggle {
+  font: inherit;
+  height: 30px;
+  border: 1px solid var(--map-control-border);
+  border-radius: 6px;
+  background: var(--map-control);
+  color: var(--map-ink);
+  cursor: pointer;
+}
+
+.square {
+  font-size: 15px;
+  width: 30px;
+}
+
+.zoomReset {
+  font-size: 12px;
+  min-width: 52px;
+}
+
+.toggle {
+  font-size: 12px;
+  padding: 0 12px;
+}
+
+.overlayOn {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.gitOn {
+  background: var(--map-control-on);
+}
+
+.note {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--map-muted);
+}
+
+.git {
+  /* The artifact's width setting excludes the padding and border. */
+  box-sizing: content-box;
+  flex: 0 0 auto;
+  min-height: 0;
+  overflow-y: auto;
+  background: var(--map-bar);
+  border-right: 1px solid var(--map-bar-border);
+  padding: 14px 14px 18px;
+}
+
+.gitTitle {
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  color: var(--map-muted);
+}
+
+.gitNote {
+  font-size: 12px;
+  color: var(--map-muted);
+  margin: 6px 0 12px;
+}
+
+.gitInk {
+  color: var(--map-ink);
+}
+
+.gitCard {
+  border: 1px solid var(--map-control-border);
+  border-radius: 8px;
+  background: var(--map-card);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gitCommit {
+  display: flex;
+  gap: 10px;
+  font-size: 12.5px;
+}
+
+.gitBase {
+  padding: 12px 12px 0;
+}
+
+.gitSha {
+  flex: none;
+  color: var(--map-muted);
+}
+
+.gitName {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,114 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.button,
+.primary {
+  font: inherit;
+  font-size: 12.5px;
+  border: 1px solid var(--control-border);
+  background: var(--page);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 4px 12px;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.primary:disabled,
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--subtle);
+}
+
+.success {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--add-ink);
+}
+
+.failure {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--del-ink);
+  overflow-wrap: anywhere;
+}
+
+.unknown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--modified-mark);
+}
+
+.unknown p {
+  margin: 0;
+}
+
+.dialog {
+  max-width: min(560px, calc(100vw - 32px));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  color: var(--ink);
+  background: var(--page);
+  font: inherit;
+}
+
+.dialog::backdrop {
+  background: var(--backdrop);
+}
+
+.dialogTitle {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 12px;
+  font-size: 12.5px;
+}
+
+.facts dt {
+  color: var(--muted);
+}
+
+.facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.acknowledge {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: var(--del-ink);
+}
+
+.dialogActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}

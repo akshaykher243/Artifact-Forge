@@ -1,0 +1,7 @@
+docs/
+dist/
+pnpm-lock.yaml
+.claude/
+tests/fixtures/*.json
+playwright-report/
+test-results/

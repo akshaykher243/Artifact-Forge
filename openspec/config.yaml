@@ -1,0 +1,30 @@
+schema: spec-driven
+
+context: |
+  ArtifactForge turns an exported Claude Design artifact ("prflow review",
+  docs/prflow report redesign – Review execution order and diffs.html) into a
+  local-first visual pull-request review app. The exported artifact is the source
+  of truth for UI and interaction; files under docs/ are reference material and
+  are never edited or deleted.
+  Local Git (over SSH remotes) is the only source of repository changes. The
+  GitHub CLI (`gh`) is the only PR integration, limited to an allowlist of
+  commands; no direct GitHub API client, MCP, connector, OAuth flow or GitHub App.
+  `gh` talks to GitHub's APIs internally; specs never describe this as API-free.
+  No repository source or diff leaves the machine except the review text the user
+  explicitly confirms for submission. Nothing is pushed, no branch is changed, no
+  review is approved automatically.
+  pnpm only. Arrow functions and braces on every if.
+
+rules:
+  proposal:
+    - Every artifact element not built in the change is listed under Deferred with a reason
+    - Approval line stays empty until the user approves the proposal and the specs
+  specs:
+    - Quote user-visible copy from the artifact verbatim in backticks
+    - Every scenario is one test, including empty, invalid, refused and error cases
+    - No library, component or endpoint names
+  design:
+    - Refuse while the proposal is not approved
+  tasks:
+    - Refuse while the proposal is not approved
+    - Every milestone leaves the app runnable and states its own verification

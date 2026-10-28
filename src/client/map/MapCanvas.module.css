@@ -1,0 +1,221 @@
+.area {
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
+  /* Keeps the legend inside the canvas when the panels leave it narrow. */
+  overflow: hidden;
+}
+
+.scroller {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  background-color: var(--map-canvas);
+  background-image: radial-gradient(var(--map-dot) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.stage {
+  position: relative;
+}
+
+.inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+
+.box {
+  position: absolute;
+  border: 1px solid var(--map-box-border);
+  border-radius: 6px;
+}
+
+.folderBox {
+  background: var(--map-folder-bg);
+}
+
+.fileBox {
+  background: var(--map-file-bg);
+}
+
+.touched {
+  border-color: var(--map-box-touched);
+}
+
+.boxLabel {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 6px;
+  font-size: 11.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--map-ink);
+}
+
+.boxName {
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--map-muted);
+}
+
+.edge {
+  position: absolute;
+  overflow: visible;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.edge path {
+  fill: none;
+  stroke: var(--map-edge);
+  stroke-width: 1.5;
+}
+
+.edge circle {
+  fill: var(--map-edge);
+}
+
+.node {
+  position: absolute;
+  padding: 5px 10px;
+  text-align: left;
+  font: inherit;
+  color: var(--map-ink);
+  background: var(--map-node-bg);
+  border: 1.5px solid var(--map-node-border);
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.added {
+  background: var(--map-added-bg);
+  border-color: var(--map-added-border);
+}
+
+.changed {
+  background: var(--map-changed-bg);
+  border-color: var(--map-changed-border);
+}
+
+.selected {
+  box-shadow: 0 0 0 2px var(--map-ring);
+}
+
+.nodeHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.nodeLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nodeCounts {
+  flex: none;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.nodeSub {
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  color: var(--map-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preview {
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.addInk {
+  color: var(--map-add-ink);
+}
+
+.delInk {
+  color: var(--map-del-ink);
+}
+
+.message {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--map-bar);
+  border: 1px solid var(--map-bar-border);
+  color: var(--map-ink);
+  font-size: 12.5px;
+  text-align: center;
+}
+
+.legend {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--map-bar);
+  border: 1px solid var(--map-bar-border);
+  font-size: 11.5px;
+  color: var(--map-muted);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--map-node-bg);
+  border: 1.5px solid var(--map-node-border);
+}
+
+.callsSwatch {
+  width: 14px;
+  height: 2px;
+  background: var(--map-legend-calls);
+}
+
+.swatch.added {
+  background: var(--map-added-bg);
+  border-color: var(--map-added-border);
+}
+
+.swatch.changed {
+  background: var(--map-changed-bg);
+  border-color: var(--map-changed-border);
+}

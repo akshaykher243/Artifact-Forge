@@ -1,0 +1,124 @@
+.tree {
+  display: flex;
+  flex-direction: column;
+}
+
+.dir,
+.file {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+}
+
+.dir {
+  gap: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 18px;
+  font-weight: 600;
+}
+
+.caret {
+  width: 12px;
+  font-size: 10px;
+  color: var(--subtle);
+}
+
+.file {
+  gap: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 18px;
+  font-size: 13px;
+}
+
+.compact {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 12px;
+}
+
+.selected {
+  background: var(--selected-bg);
+}
+
+.mark {
+  flex: none;
+  width: 12px;
+  text-align: center;
+}
+
+.markAdded {
+  color: var(--add-ink);
+  font-size: 14px;
+}
+
+.markModified {
+  color: var(--modified-mark);
+  font-size: 8px;
+}
+
+.markRenamed {
+  color: var(--subtle);
+  font-size: 8px;
+}
+
+.markDeleted {
+  color: var(--del-ink);
+  font-size: 14px;
+}
+
+.compact .markAdded,
+.compact .markDeleted {
+  font-size: 13px;
+}
+
+.compact .markModified,
+.compact .markRenamed {
+  font-size: 7px;
+}
+
+.name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.done {
+  color: var(--subtle);
+}
+
+.counts {
+  flex: none;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.add {
+  color: var(--add-ink);
+}
+
+.del {
+  color: var(--del-ink);
+}
+
+.doneLabel {
+  color: var(--subtle);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

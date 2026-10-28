@@ -1,0 +1,154 @@
+.sidebar {
+  /* The artifact's sidebar width excludes its border; keep the same geometry. */
+  box-sizing: content-box;
+  flex: none;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+}
+
+.summary {
+  flex: none;
+  padding: 10px 18px 8px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summaryRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.summaryRefs {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.change {
+  flex: none;
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid var(--control-border);
+  background: var(--page);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 3px 9px;
+  min-height: 28px;
+  cursor: pointer;
+}
+
+.summaryNote {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.progress {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.add {
+  color: var(--add-ink);
+}
+
+.del {
+  color: var(--del-ink);
+}
+
+.compact {
+  margin-left: auto;
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid var(--control-border);
+  background: var(--page);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 3px 9px;
+  min-height: 28px;
+  cursor: pointer;
+}
+
+.compactOn {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.ring {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ringTrack,
+.ringValue {
+  fill: none;
+  stroke-width: 3;
+}
+
+.ringTrack {
+  stroke: var(--border);
+}
+
+.ringValue {
+  stroke: var(--accent);
+  stroke-linecap: round;
+}
+
+.files {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 18px;
+}
+
+.filesHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 18px 6px;
+}
+
+.filter {
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid var(--control-border);
+  border-radius: 6px;
+  padding: 3px 9px;
+  min-height: 28px;
+  background: var(--page);
+  color: var(--ink);
+}
+
+.filesTitle {
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.saveError {
+  font-size: 11.5px;
+  color: var(--del-ink);
+}

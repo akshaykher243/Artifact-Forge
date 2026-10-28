@@ -1,0 +1,143 @@
+.draft {
+  margin: 6px 12px 8px 64px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--page);
+  font-size: 12.5px;
+  white-space: normal;
+}
+
+.isDraft {
+  border: 1px dashed var(--accent);
+}
+
+.isOutdated {
+  border: 1px dashed var(--modified-mark);
+}
+
+.isSubmitted {
+  border: 1px solid var(--control-border);
+}
+
+.focused {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.draftHeader {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stateLabel {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: var(--selected-bg);
+  color: var(--accent);
+}
+
+.isOutdated .stateLabel {
+  background: var(--panel);
+  color: var(--modified-mark);
+}
+
+.isSubmitted .stateLabel {
+  background: var(--add-bg);
+  color: var(--add-ink);
+}
+
+.location {
+  color: var(--subtle);
+  font-size: 12px;
+}
+
+.actions {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.button,
+.primary,
+.danger {
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid var(--control-border);
+  background: var(--page);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 2px 9px;
+  min-height: 26px;
+  cursor: pointer;
+}
+
+.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.danger {
+  border-color: var(--del-ink);
+  color: var(--del-ink);
+}
+
+.body {
+  margin: 6px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.link {
+  font-size: 12px;
+}
+
+.error {
+  color: var(--del-ink);
+  font-size: 12px;
+}
+
+.composer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.textarea {
+  font: inherit;
+  font-size: 12.5px;
+  width: 100%;
+  min-height: 64px;
+  resize: vertical;
+  border: 1px solid var(--control-border);
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: var(--ink);
+  background: var(--page);
+}
+
+.composerActions {
+  display: flex;
+  gap: 6px;
+}
+
+.rangeError {
+  margin: 4px 12px 6px 64px;
+  font-size: 12px;
+  color: var(--del-ink);
+}
+
+.moving {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--modified-mark);
+}
